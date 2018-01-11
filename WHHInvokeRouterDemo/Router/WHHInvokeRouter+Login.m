@@ -10,9 +10,9 @@
 
 @implementation WHHInvokeRouter (Login)
 
-- (void)loginWithUsename:(NSString *)usernamme Password:(NSInteger)password
+- (void)loginWithUsername:(NSString *)usernamme Password:(NSInteger)password
 {
-    [WHHInvokeRouter dispatchInvokes:@"login" action:@"loginWithUsename:Password:" error:nil,usernamme,password];
+    [WHHInvokeRouter dispatchInvokes:@"login" action:@"loginWithUsername:Password:" error:nil,usernamme,password];
 }
 
 - (NSString *)testDict:(NSDictionary *)dic AndArray:(NSArray *)array andBlock:(void(^)(int status))block

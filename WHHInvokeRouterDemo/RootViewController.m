@@ -20,12 +20,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"主页";
-    [[WHHInvokeRouter sharedInstance] loginWithUsename:@"wuhh" Password:123];
+//    [[WHHInvokeRouter sharedInstance] loginWithUsername:@"wuhh" Password:123];
     NSString *result = [[WHHInvokeRouter sharedInstance] testDict:@{@"T":@"Test"} AndArray:@[@"test"] andBlock:^(int status) {
         NSLog(@"%d",status);
     }];
     
     NSLog(@"result:%@",result);
+    
+    NSString *url = @"WHHRouterDemo://login/loginWithUsername?username=name&Password=12345";
+    [WHHInvokeRouter dispatchInvokesWithUrl:url];
 }
 
 - (void)didReceiveMemoryWarning {

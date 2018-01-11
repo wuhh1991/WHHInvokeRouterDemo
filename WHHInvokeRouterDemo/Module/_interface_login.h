@@ -10,7 +10,7 @@
 
 @interface _interface_login : NSObject
 
-- (void)loginWithUsename:(NSString *)usernamme Password:(NSInteger)password;
+- (void)loginWithUsername:(NSString *)usernamme Password:(NSInteger)password;
 
 - (NSString *)testDict:(NSDictionary *)dic AndArray:(NSArray *)array andBlock:(void(^)(int status))block;
 
